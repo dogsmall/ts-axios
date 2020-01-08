@@ -44,7 +44,7 @@ export default class Axios {
     this.interceptors.request.forEach(interceptor => {
       chain.unshift(interceptor)
     })
-    this.interceptors.request.forEach(interceptor => {
+    this.interceptors.response.forEach(interceptor => {
       chain.push(interceptor)
     })
     let promise = Promise.resolve(config)
